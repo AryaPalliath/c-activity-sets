@@ -27,7 +27,17 @@ int input() {
 }
 
 int compare(int a, int b, int c) {
-    int largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+    int largest;
+    if(a>b&&a>c){
+        largest = a;
+    }
+    if(b>c){
+        largest = b;
+    }
+    else
+    {
+        largest=c;
+    }
     return largest;
 }
 

@@ -25,8 +25,6 @@ float input()
 
 float square_root(float n) 
 {
-   
-
   float x_old=1,x_new=n/2;
   float precision=0.000001;
   while(fabs(x_new-x_old)>precision)

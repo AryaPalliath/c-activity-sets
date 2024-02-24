@@ -5,6 +5,7 @@ void compare(int a, int b, int c, int *largest);
 void output(int a, int b, int c, int largest);
 
 int main() {
+    
     int num1, num2, num3, largest;
 
     num1 = input();
@@ -26,9 +27,18 @@ int input() {
 }
 
 void compare(int a, int b, int c, int *largest) {
-    *largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+    if(a>b&&a>c){
+        *largest = a;
+    }
+    if(b>c){
+        *largest = b;
+    }
+    else
+    {
+        *largest=c;
+    }
 }
 
 void output(int a, int b, int c, int largest) {
-    printf("The largest of %d, %d, and %d is %d\n", a, b, c, largest);
+    printf("The largest of %d, %d, and %d is=> %d\n", a, b, c, largest);
 }
